@@ -1,6 +1,9 @@
+let checkbox;
+let taskName;
+
 const check = (obj) => {
-  const checkbox = document.getElementById(`checkbox-${obj.index}`);
-  const taskName = checkbox.parentElement.lastElementChild;
+  checkbox = document.getElementById(`checkbox-${obj.index}`);
+  taskName = checkbox.parentElement.lastElementChild;
   checkbox.addEventListener('click', () => {
     const todos = JSON.parse(localStorage.getItem('todo-list'));
     if (checkbox.checked === true) {
@@ -17,8 +20,8 @@ const check = (obj) => {
 };
 
 const checkUpdate = (obj) => {
-  const checkbox = document.getElementById(`checkbox-${obj.index}`);
-  const taskName = document.getElementById(`description-${obj.index}`);
+  checkbox = document.getElementById(`checkbox-${obj.index}`);
+  taskName = document.getElementById(`description-${obj.index}`);
   if (obj.completed === true) {
     checkbox.checked = true;
     taskName.classList.add('checked');
