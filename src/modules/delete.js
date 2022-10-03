@@ -1,12 +1,12 @@
-const task = document.querySelectorAll('.task');
+const taskElement = document.querySelectorAll('.task');
 
 const todos = JSON.parse(localStorage.getItem('todo-list')) || [];
 
 const deleteTask = () => {
-  task.forEach((t) => {
-    t.addEventListener('click', (e) => {
+  taskElement.forEach((task) => {
+    task.addEventListener('click', (e) => {
       if (e.target.classList.contains('delete') || e.target.classList.contains('delete-icon')) {
-        todos.splice(t.id, 1);
+        todos.splice(task.id, 1);
         localStorage.setItem('todo-list', JSON.stringify(todos));
         window.location.reload();
       }
