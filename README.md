@@ -12,7 +12,7 @@
 
 ## Live Demo
 
-[Live Demo not available yet](https://github.com/Javivy/to-do-list)
+[Live Demo not available yet](https://github.com/Javivy/todo-list-best-practices)
 
 
 ## Getting Started
